@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <title>Shopping Website</title>
+
+</head>
+
+<body>
+    <section id="header">
+        <a href="{{ url_for('index')}}" style="text-decoration: none">
+            <h2>Shopping</h2>
+        </a>
+        <div>
+            <ul id="navbar">
+                <li><a href="{{ url_for('index')}}">Home</a></li>
+                <li><a class="active" href="{{ url_for('products')}}">Products</a></li>
+                <!-- <li><a href="Wishlist.html">Wishlist</a></li> -->
+                <li><a href="{{ url_for('login')}}">Account</a></li>
+                <li><a  href="{{ url_for('aboutus')}}">About</a></li>
+                <li id="lg-bag" style="text-decoration: none"><a href="{{ url_for('cart')}}"><i
+                            class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="{{ url_for('cart')}}" style="text-decoration: none"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+
+        </div>
+    </section>
+
+    <section id="page-header">
+        <h2>#Summer</h2>
+        <p>Save more with coupons & up to 70% off!</p>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <div class="pro-container1">
+            <script type="text/javascript" src="{{ url_for('static', filename='JS/script2.js') }}"></script>
+        </div>
+    </section>
+
+    <section id="pagination" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletters</h4>
+            <p>Get Email updates about our latest products and <span>special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Bruce B Downs Blvd</p>
+            <p><strong>Phone:</strong>+1 6562049519/ +16562006993</p>
+            <p><strong>Hours:</strong>10:00 - 20:00, Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="{{ url_for('aboutus')}}">About Us</a>
+            <a href="#">Return Policy</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="{{ url_for('contactus')}}">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="{{ url_for('cart')}}">View Cart</a>
+            <!-- <a href="#">Wishlist</a> -->
+            <a href="#">Track My Order</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="static/img/app/a1.jpg" alt="">
+                <img src="static/img/app/a2.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="static/img/app/a3.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>&COPY; Copyrights 2023 at <a href="" style="text-decoration: none;">Shopping Website</a></p>
+        </div>
+    </footer>
+   
+<script>
+    // Get all product div elements
+const productDivs = document.querySelectorAll('.pro');
+
+// Loop through each product div
+productDivs.forEach((productDiv) => {
+  // Add a click event listener to the div
+  productDiv.addEventListener('click', () => {
+    // Redirect to the item page
+    window.location.href = "{{url_for('item')}}";
+  });
+});
+
+</script>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+.pro:hover {
+    transform: translateY(-5px);
+  }
+  body{
+    background: lightblue;
+  }
+  .pro img {
+    width: 80%;
+    height: 60%;
+    object-fit:contain;
+    border-radius: 20px;
+
+  }
+  
+  .des {
+    padding-top: 5%;
+
+    padding-left: 20%;
+  }
+  
+  .des span {
+    color: white;
+    font-size: 12px;;
+    text-transform: uppercase;
+  }
+  
+  .des h5 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .star {
+    margin-bottom: 0.5rem;
+    color: #ffc107;
+  }
+  
+  .star i {
+    margin-right: 0.25rem;
+  }
+  
+  .des h4 {
+    margin: 0;
+  }
+
+  .pro a{
+      visibility: hidden;
+  }
+ 
+  
+  .product-info {
+    margin-top: 30px;
+    padding-left: 20%;
+  }
+  
+  
+ 
+
+  

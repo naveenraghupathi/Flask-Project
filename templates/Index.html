@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <title>Shopping</title>
+</head>
+<body>
+    <section id="header">
+        <a href="{{ url_for('index')}}" style="text-decoration: none"><h2>Shopping</h2></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="{{ url_for('index')}}">Home</a></li>
+                <li><a href="{{ url_for('products')}}">Products</a></li>
+                <!-- <li><a href="Wishlist.html">Wishlist</a></li> -->
+                <li><a href="{{ url_for('login')}}">Account</a></li>
+                <li><a  href="{{ url_for('aboutus')}}">About</a></li>
+                <li id="lg-bag" style="text-decoration: none"><a href="{{ url_for('cart')}}"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="{{ url_for('cart')}}" style="text-decoration: none"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+            
+        </div>
+    </section>
+
+    <section id="hero">
+        <h4>Trade-in-offer</h4>
+        <h2>Super Value deals</h2>
+        <h1>On all products</h1>
+        <p>Save more with coupons & up to 70% off!</p>
+        <button>Shop Now</button>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="static/img/features/f1.png" alt="features1">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="static/img/features/f2.png" alt="features2">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="static/img/features/f3.png" alt="features3">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="static/img/features/f4.png" alt="features4">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="static/img/features/f5.png" alt="features5">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="static/img/features/f6.png" alt="features6">
+            <h6>24/7 Support</h6>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer Collection New Modern Design</p>
+        <div class="pro-container1">
+            <script type="text/javascript" src="{{ url_for('static', filename='JS/script2.js') }}"></script>
+        </div>
+    </section>
+
+    <section id="banner" class="section-m1">
+        <h4>Repair Services</h4>
+        <h2>Up to <span>70% off</span>- All t-shirts & Accessories</h2>
+        <button class="normal">Explore More</button>
+    </section>
+
+    <section id="product2" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>Summer Collection New Modern Design</p>
+        <div class="pro-container2">
+            <script type="text/javascript" src="{{ url_for('static', filename='JS/script3.js') }}"></script>
+
+        </div>
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+            <div class="banner-box">
+                <h4>Crazy deals</h4>
+                <h2>Buy 1 get 1 free</h2>
+                <span>The best classic dress is on sale</span>
+                <button class="white">Learn More</button>
+            </div>
+            <div class="banner-box banner-box2">
+                <h4>Spring</h4>
+                <h2>Upcoming Season</h2>
+                <span>The best classic dress is on sale</span>
+                <button class="white">Collection</button>
+            </div>
+
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>Winter Sale</h2>
+            <h3>Winter Collection 50% off</h3>
+        </div>
+        <div class="banner-box banner-box2">
+            <h2>Winter Sale</h2>
+            <h3>Winter Collection 50% off</h3>
+        </div>
+        <div class="banner-box banner-box3">
+            <h2>Winter Sale</h2>
+            <h3>Winter Collection 50% off</h3>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletters</h4>
+            <p>Get Email updates about our latest products and <span>special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Bruce B Downs Blvd</p>
+            <p><strong>Phone:</strong>+1 6562049519/ +16562006993</p>    
+            <p><strong>Hours:</strong>10:00 - 20:00, Mon-Sat</p>   
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="{{ url_for('aboutus')}}">About Us</a>
+            <a href="#">Return Policy</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="{{ url_for('contactus')}}">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="{{ url_for('cart')}}">View Cart</a>
+            <!-- <a href="#">Wishlist</a> -->
+            <a href="#">Track My Order</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="static/img/app/a1.jpg" alt="">
+                <img src="static/img/app/a2.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="static/img/app/a3.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>&COPY; Copyrights 2023 at <a href="" style="text-decoration: none;">Shopping Website</a></p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
